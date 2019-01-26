@@ -20,14 +20,14 @@ export interface StreamingVideoLiveOptions {
  * ```typescript
  * import { StreamingVideoLive, StreamingVideoLiveOptions } from '@ionic-native/streaming-video-live';
  *
- * constructor(private streamingVideoLive: StreamingVideo) { }
+ * constructor(private streamingVideoLive: StreamingVideoLive) { }
  *
  * let options: StreamingVideoLiveOptions = {
  *   successCallback: () => { console.log('Video played') },
  *   errorCallback: (e) => { console.log('Error streaming') }
  * };
  *
- * this.streamingVideo.streamVideo('rtsp://ip:port/app_name/chanel_name', options);
+ * this.streamingVideoLive.streamVideo('rtsp://ip:port/app_name/chanel_name', options);
  *
  * ```
  * @interfaces
@@ -41,7 +41,7 @@ export interface StreamingVideoLiveOptions {
   platforms: ['Android']
 })
 @Injectable()
-export class StreamingVideo extends IonicNativePlugin {
+export class StreamingVideoLive extends IonicNativePlugin {
   /**
    * Streams a video in live
    * @param streamUrl {string} The URL of the video in live
